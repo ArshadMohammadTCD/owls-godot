@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://3aqtokbnfbtu"
+path="res://.godot/imported/violet.dialogue-512c35d715e1e462fe7994d0a560cafb.tres"
+
+[deps]
+
+source_file="res://violet.dialogue"
+dest_files=["res://.godot/imported/violet.dialogue-512c35d715e1e462fe7994d0a560cafb.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,11 @@
+~ start
+Violet: [[Helloo]], which pet do you prefer.
+Violet: Cats or Dogs.
+
+- Cats
+	Violet: Cats are cool *Seems amused, can tell*.
+	
+- Dogs
+	Violet: Dogs are cool also *Seems uninterested*.
+	
+=> END

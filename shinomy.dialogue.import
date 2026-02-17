@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://04amvpkbl1se"
+path="res://.godot/imported/shinomy.dialogue-d6ef566112969754120235726f3ade9d.tres"
+
+[deps]
+
+source_file="res://shinomy.dialogue"
+dest_files=["res://.godot/imported/shinomy.dialogue-d6ef566112969754120235726f3ade9d.tres"]
+
+[params]
+
+defaults=true

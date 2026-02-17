@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b5773dyridgye"
+path="res://.godot/imported/razon.dialogue-1308023e6ab24ce719f852293f66fe02.tres"
+
+[deps]
+
+source_file="res://razon.dialogue"
+dest_files=["res://.godot/imported/razon.dialogue-1308023e6ab24ce719f852293f66fe02.tres"]
+
+[params]
+
+defaults=true

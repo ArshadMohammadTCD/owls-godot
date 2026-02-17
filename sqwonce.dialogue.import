@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://b5glf3jemlokw"
+path="res://.godot/imported/sqwonce.dialogue-f55af516c9f641ddacc80dfa037885bb.tres"
+
+[deps]
+
+source_file="res://sqwonce.dialogue"
+dest_files=["res://.godot/imported/sqwonce.dialogue-f55af516c9f641ddacc80dfa037885bb.tres"]
+
+[params]
+
+defaults=true

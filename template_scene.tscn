@@ -1,0 +1,302 @@
+[gd_scene load_steps=31 format=3 uid="uid://ctyjhes116421"]
+
+[ext_resource type="Texture2D" uid="uid://p3l3systlivo" path="res://Ocean_5/1.png" id="1_hg60w"]
+[ext_resource type="Texture2D" uid="uid://ddtsaf7wodq04" path="res://Ocean_5/2.png" id="2_2q53r"]
+[ext_resource type="Texture2D" uid="uid://gt5lg61cbqqc" path="res://nature_2/3.png" id="3_rarr0"]
+[ext_resource type="Texture2D" uid="uid://cpf2v16q3cwaq" path="res://Ocean_5/3.png" id="3_ywops"]
+[ext_resource type="Texture2D" uid="uid://6o2h7frclltq" path="res://Ocean_5/4.png" id="4_y561w"]
+[ext_resource type="Texture2D" uid="uid://bpti6dh70gkyw" path="res://Ocean_5/Railing.png" id="5_2q53r"]
+[ext_resource type="Texture2D" uid="uid://2rkqjoo1j7nd" path="res://Hemi Racing Front View.png" id="6_6u7ri"]
+[ext_resource type="Texture2D" uid="uid://dqcs4n43ss6dy" path="res://Razon-2.png" id="7_6f66h"]
+[ext_resource type="Script" uid="uid://cxb01g4rp7r2b" path="res://sebby.gd" id="7_rarr0"]
+[ext_resource type="Texture2D" uid="uid://oh2vxgh04u6f" path="res://Almo.png" id="9_1vhmt"]
+[ext_resource type="Script" uid="uid://dcxrlh7vdo6ba" path="res://npc.gd" id="9_npc"]
+[ext_resource type="Texture2D" uid="uid://6yfnewyk7vo" path="res://cat.png" id="10_7hqkv"]
+[ext_resource type="Resource" uid="uid://b5773dyridgye" path="res://razon.dialogue" id="10_razon_dlg"]
+[ext_resource type="Resource" uid="uid://b5glf3jemlokw" path="res://sqwonce.dialogue" id="11_sqwonce_dlg"]
+[ext_resource type="Resource" uid="uid://3aqtokbnfbtu" path="res://violet.dialogue" id="12_y561w"]
+[ext_resource type="Texture2D" uid="uid://1f7108esi8b5" path="res://violet.png" id="12_ywops"]
+[ext_resource type="Texture2D" uid="uid://dwcukhjujiafo" path="res://Sebby-2.png" id="13_2q53r"]
+[ext_resource type="Texture2D" uid="uid://07otfedffv31" path="res://lilac.png" id="15_bn1ym"]
+[ext_resource type="Texture2D" uid="uid://bros4jw8hqq2f" path="res://anselm.png" id="16_1vhmt"]
+[ext_resource type="Texture2D" uid="uid://cr1wff5vp8mmr" path="res://spr_bike_0.png" id="20_b10l3"]
+[ext_resource type="Resource" uid="uid://04amvpkbl1se" path="res://shinomy.dialogue" id="21_4fw28"]
+[ext_resource type="Texture2D" uid="uid://bi8lcx511v767" path="res://Shinomy.png" id="22_ud1vh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rarr0"]
+size = Vector2(89, 398.5)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_rarr0"]
+normal = Vector2(0.999989, -0.004694784)
+distance = -242.48558
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hg60w"]
+size = Vector2(6343, 38)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6jwpa"]
+load_path = "res://.godot/imported/Sqwonce.png-da0abecc00d1bf85ef329c64b16a7c64.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqwonce_area"]
+size = Vector2(112.5, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_razon_area"]
+size = Vector2(55, 118)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yngf6"]
+size = Vector2(48, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6flcb"]
+size = Vector2(84, 93.5)
+
+[node name="Template_Level" type="Node2D"]
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(3462, 177.75)
+shape = SubResource("RectangleShape2D_rarr0")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_rarr0")
+
+[node name="Parallax" type="Node2D" parent="."]
+
+[node name="Sky_Parallax" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.02, 0.02)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
+
+[node name="Sky" type="Sprite2D" parent="Parallax/Sky_Parallax"]
+position = Vector2(288, 162)
+texture = ExtResource("1_hg60w")
+
+[node name="Cloud_Parallax" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.02, 0.02)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
+
+[node name="Clouds" type="Sprite2D" parent="Parallax/Cloud_Parallax"]
+position = Vector2(289, 164)
+texture = ExtResource("2_2q53r")
+
+[node name="Hills_Parallax" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.05, 0.05)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
+
+[node name="Hills" type="Sprite2D" parent="Parallax/Hills_Parallax"]
+position = Vector2(290, 163)
+texture = ExtResource("3_ywops")
+
+[node name="Grass_Parallax" type="Parallax2D" parent="Parallax"]
+scroll_scale = Vector2(0.06, 0.06)
+repeat_size = Vector2(576, 0)
+repeat_times = 10
+
+[node name="Grass" type="Sprite2D" parent="Parallax/Grass_Parallax"]
+position = Vector2(289, 164)
+texture = ExtResource("4_y561w")
+
+[node name="Railing_Parallax" type="Parallax2D" parent="Parallax"]
+repeat_size = Vector2(576, 0)
+repeat_times = 10
+
+[node name="Railing" type="Sprite2D" parent="Parallax/Railing_Parallax"]
+position = Vector2(321, 294)
+scale = Vector2(2, 2)
+texture = ExtResource("5_2q53r")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+
+[node name="Ground_Collision" type="CollisionShape2D" parent="Ground"]
+position = Vector2(291.5, 345)
+shape = SubResource("RectangleShape2D_hg60w")
+debug_color = Color(0.9297358, 3.3691525e-05, 0.6615511, 0.41960785)
+
+[node name="Grass" type="Sprite2D" parent="Ground/Ground_Collision"]
+position = Vector2(739.5, -27.000008)
+scale = Vector2(8.4375, 0.1728396)
+texture = ExtResource("3_rarr0")
+
+[node name="Sqwonce" type="CharacterBody2D" parent="."]
+position = Vector2(799, 278)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("11_sqwonce_dlg")
+
+[node name="Sqwonce_sprite" type="Sprite2D" parent="Sqwonce"]
+position = Vector2(26, 1)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_6jwpa")
+
+[node name="InteractionArea" type="Area2D" parent="Sqwonce"]
+position = Vector2(40, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sqwonce/InteractionArea"]
+position = Vector2(-39.25, 0)
+shape = SubResource("RectangleShape2D_sqwonce_area")
+
+[node name="Sqwonce3" type="CharacterBody2D" parent="."]
+position = Vector2(860, 278)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("11_sqwonce_dlg")
+
+[node name="Sqwonce_sprite" type="Sprite2D" parent="Sqwonce3"]
+position = Vector2(26, 1)
+scale = Vector2(3, 3)
+texture = ExtResource("9_1vhmt")
+
+[node name="InteractionArea" type="Area2D" parent="Sqwonce3"]
+position = Vector2(40, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sqwonce3/InteractionArea"]
+position = Vector2(13, -6)
+shape = SubResource("RectangleShape2D_sqwonce_area")
+
+[node name="Sqwonce2" type="CharacterBody2D" parent="."]
+position = Vector2(2566, 278)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("11_sqwonce_dlg")
+dialogue_start = "start2"
+
+[node name="Sqwonce_sprite" type="Sprite2D" parent="Sqwonce2"]
+position = Vector2(26, 1)
+scale = Vector2(3, 3)
+texture = SubResource("CompressedTexture2D_6jwpa")
+
+[node name="InteractionArea" type="Area2D" parent="Sqwonce2"]
+position = Vector2(40, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sqwonce2/InteractionArea"]
+position = Vector2(-16, -9)
+shape = SubResource("RectangleShape2D_sqwonce_area")
+
+[node name="Car" type="Sprite2D" parent="."]
+position = Vector2(734, 297)
+texture = ExtResource("6_6u7ri")
+
+[node name="Car2" type="Sprite2D" parent="."]
+position = Vector2(1253, 317)
+texture = ExtResource("10_7hqkv")
+
+[node name="Razon" type="CharacterBody2D" parent="."]
+position = Vector2(581, 266)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("10_razon_dlg")
+
+[node name="Razon_Sprite" type="Sprite2D" parent="Razon"]
+position = Vector2(69, 12)
+scale = Vector2(3, 3)
+texture = ExtResource("7_6f66h")
+
+[node name="InteractionArea" type="Area2D" parent="Razon"]
+position = Vector2(57, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Razon/InteractionArea"]
+position = Vector2(5, 2)
+shape = SubResource("RectangleShape2D_razon_area")
+
+[node name="Violet" type="CharacterBody2D" parent="."]
+position = Vector2(1152, 267)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("12_y561w")
+
+[node name="InteractionArea" type="Area2D" parent="Violet"]
+position = Vector2(57, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Violet/InteractionArea"]
+position = Vector2(13, -2)
+shape = SubResource("RectangleShape2D_razon_area")
+
+[node name="Sprite2D" type="Sprite2D" parent="Violet"]
+position = Vector2(70, 11)
+scale = Vector2(3, 3)
+texture = ExtResource("12_ywops")
+
+[node name="Lilac" type="CharacterBody2D" parent="."]
+position = Vector2(1208, 265)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("12_y561w")
+
+[node name="Lilac_Sprite" type="Sprite2D" parent="Lilac"]
+position = Vector2(-47, 10)
+scale = Vector2(3, 3)
+texture = ExtResource("15_bn1ym")
+flip_h = true
+
+[node name="InteractionArea" type="Area2D" parent="Lilac"]
+position = Vector2(57, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lilac/InteractionArea"]
+position = Vector2(-106.5, -6)
+shape = SubResource("RectangleShape2D_razon_area")
+
+[node name="Lilac2" type="CharacterBody2D" parent="."]
+position = Vector2(1386, 263)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("12_y561w")
+
+[node name="Lilac_Sprite" type="Sprite2D" parent="Lilac2"]
+position = Vector2(-107, 15)
+scale = Vector2(3, 3)
+texture = ExtResource("16_1vhmt")
+
+[node name="InteractionArea" type="Area2D" parent="Lilac2"]
+position = Vector2(47, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lilac2/InteractionArea"]
+position = Vector2(-142, 0)
+shape = SubResource("RectangleShape2D_razon_area")
+
+[node name="Sebby" type="CharacterBody2D" parent="."]
+position = Vector2(240, 276)
+script = ExtResource("7_rarr0")
+
+[node name="Sebby_Sprite" type="Sprite2D" parent="Sebby"]
+scale = Vector2(3, 3)
+texture = ExtResource("13_2q53r")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sebby"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_yngf6")
+
+[node name="Camera2D" type="Camera2D" parent="Sebby"]
+position = Vector2(2, -114)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(961, 291)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("20_b10l3")
+
+[node name="Shinomy" type="CharacterBody2D" parent="."]
+position = Vector2(1669, 306)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("21_4fw28")
+
+[node name="Sprite2D" type="Sprite2D" parent="Shinomy"]
+position = Vector2(2, -29)
+scale = Vector2(3, 3)
+texture = ExtResource("22_ud1vh")
+
+[node name="InteractionArea" type="Area2D" parent="Shinomy"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shinomy/InteractionArea"]
+position = Vector2(1, -28.25)
+shape = SubResource("RectangleShape2D_6flcb")
+
+[connection signal="body_entered" from="Sqwonce/InteractionArea" to="Sqwonce" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Sqwonce/InteractionArea" to="Sqwonce" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Sqwonce3/InteractionArea" to="Sqwonce3" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Sqwonce3/InteractionArea" to="Sqwonce3" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Sqwonce2/InteractionArea" to="Sqwonce2" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Sqwonce2/InteractionArea" to="Sqwonce2" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Razon/InteractionArea" to="Razon" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Razon/InteractionArea" to="Razon" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Violet/InteractionArea" to="Violet" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Violet/InteractionArea" to="Violet" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Lilac/InteractionArea" to="Lilac" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Lilac/InteractionArea" to="Lilac" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Lilac2/InteractionArea" to="Lilac2" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Lilac2/InteractionArea" to="Lilac2" method="_on_interaction_area_body_exited"]
