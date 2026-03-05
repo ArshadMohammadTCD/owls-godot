@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://ctyjhes116421"]
+[gd_scene format=3 uid="uid://ctyjhes116421"]
 
 [ext_resource type="Texture2D" uid="uid://p3l3systlivo" path="res://Ocean_5/1.png" id="1_hg60w"]
 [ext_resource type="Texture2D" uid="uid://ddtsaf7wodq04" path="res://Ocean_5/2.png" id="2_2q53r"]
@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cpf2v16q3cwaq" path="res://Ocean_5/3.png" id="3_ywops"]
 [ext_resource type="Texture2D" uid="uid://6o2h7frclltq" path="res://Ocean_5/4.png" id="4_y561w"]
 [ext_resource type="Texture2D" uid="uid://bpti6dh70gkyw" path="res://Ocean_5/Railing.png" id="5_2q53r"]
-[ext_resource type="Texture2D" uid="uid://2rkqjoo1j7nd" path="res://Hemi Racing Front View.png" id="6_6u7ri"]
 [ext_resource type="Texture2D" uid="uid://dqcs4n43ss6dy" path="res://Razon-2.png" id="7_6f66h"]
 [ext_resource type="Script" uid="uid://cxb01g4rp7r2b" path="res://sebby.gd" id="7_rarr0"]
 [ext_resource type="Texture2D" uid="uid://oh2vxgh04u6f" path="res://Almo.png" id="9_1vhmt"]
 [ext_resource type="Script" uid="uid://dcxrlh7vdo6ba" path="res://npc.gd" id="9_npc"]
+[ext_resource type="Texture2D" uid="uid://dd1gqxwq4p0dm" path="res://SQWONCE_CAR.png" id="10_4fw28"]
 [ext_resource type="Texture2D" uid="uid://6yfnewyk7vo" path="res://cat.png" id="10_7hqkv"]
 [ext_resource type="Resource" uid="uid://b5773dyridgye" path="res://razon.dialogue" id="10_razon_dlg"]
 [ext_resource type="Resource" uid="uid://b5glf3jemlokw" path="res://sqwonce.dialogue" id="11_sqwonce_dlg"]
@@ -19,9 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://dwcukhjujiafo" path="res://Sebby-2.png" id="13_2q53r"]
 [ext_resource type="Texture2D" uid="uid://07otfedffv31" path="res://lilac.png" id="15_bn1ym"]
 [ext_resource type="Texture2D" uid="uid://bros4jw8hqq2f" path="res://anselm.png" id="16_1vhmt"]
-[ext_resource type="Texture2D" uid="uid://cr1wff5vp8mmr" path="res://spr_bike_0.png" id="20_b10l3"]
+[ext_resource type="Texture2D" uid="uid://cwp1cyn480jew" path="res://Almo_Bike.png" id="20_ud1vh"]
 [ext_resource type="Resource" uid="uid://04amvpkbl1se" path="res://shinomy.dialogue" id="21_4fw28"]
 [ext_resource type="Texture2D" uid="uid://bi8lcx511v767" path="res://Shinomy.png" id="22_ud1vh"]
+[ext_resource type="Texture2D" uid="uid://dy3b5456ui2b4" path="res://lux.png" id="23_6flcb"]
+[ext_resource type="Texture2D" uid="uid://b5httvup5mixy" path="res://Cilla.png" id="24_7rgp3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rarr0"]
 size = Vector2(89, 398.5)
@@ -48,255 +50,272 @@ size = Vector2(48, 91)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6flcb"]
 size = Vector2(84, 93.5)
 
-[node name="Template_Level" type="Node2D"]
+[node name="Template_Level" type="Node2D" unique_id=309710593]
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2136119903]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1614119696]
 position = Vector2(3462, 177.75)
 shape = SubResource("RectangleShape2D_rarr0")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1471716321]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=602619879]
 shape = SubResource("WorldBoundaryShape2D_rarr0")
 
-[node name="Parallax" type="Node2D" parent="."]
+[node name="Parallax" type="Node2D" parent="." unique_id=232818280]
 
-[node name="Sky_Parallax" type="Parallax2D" parent="Parallax"]
+[node name="Sky_Parallax" type="Parallax2D" parent="Parallax" unique_id=679213232]
 scroll_scale = Vector2(0.02, 0.02)
 repeat_size = Vector2(576, 0)
 repeat_times = 10
 
-[node name="Sky" type="Sprite2D" parent="Parallax/Sky_Parallax"]
+[node name="Sky" type="Sprite2D" parent="Parallax/Sky_Parallax" unique_id=10256489]
 position = Vector2(288, 162)
 texture = ExtResource("1_hg60w")
 
-[node name="Cloud_Parallax" type="Parallax2D" parent="Parallax"]
+[node name="Cloud_Parallax" type="Parallax2D" parent="Parallax" unique_id=1610579174]
 scroll_scale = Vector2(0.02, 0.02)
 repeat_size = Vector2(576, 0)
 repeat_times = 10
 
-[node name="Clouds" type="Sprite2D" parent="Parallax/Cloud_Parallax"]
+[node name="Clouds" type="Sprite2D" parent="Parallax/Cloud_Parallax" unique_id=2003042469]
 position = Vector2(289, 164)
 texture = ExtResource("2_2q53r")
 
-[node name="Hills_Parallax" type="Parallax2D" parent="Parallax"]
+[node name="Hills_Parallax" type="Parallax2D" parent="Parallax" unique_id=633282487]
 scroll_scale = Vector2(0.05, 0.05)
 repeat_size = Vector2(576, 0)
 repeat_times = 10
 
-[node name="Hills" type="Sprite2D" parent="Parallax/Hills_Parallax"]
+[node name="Hills" type="Sprite2D" parent="Parallax/Hills_Parallax" unique_id=1406796499]
 position = Vector2(290, 163)
 texture = ExtResource("3_ywops")
 
-[node name="Grass_Parallax" type="Parallax2D" parent="Parallax"]
+[node name="Grass_Parallax" type="Parallax2D" parent="Parallax" unique_id=1101708738]
 scroll_scale = Vector2(0.06, 0.06)
 repeat_size = Vector2(576, 0)
 repeat_times = 10
 
-[node name="Grass" type="Sprite2D" parent="Parallax/Grass_Parallax"]
+[node name="Grass" type="Sprite2D" parent="Parallax/Grass_Parallax" unique_id=475819000]
 position = Vector2(289, 164)
 texture = ExtResource("4_y561w")
 
-[node name="Railing_Parallax" type="Parallax2D" parent="Parallax"]
+[node name="Railing_Parallax" type="Parallax2D" parent="Parallax" unique_id=1233247843]
 repeat_size = Vector2(576, 0)
 repeat_times = 10
 
-[node name="Railing" type="Sprite2D" parent="Parallax/Railing_Parallax"]
+[node name="Railing" type="Sprite2D" parent="Parallax/Railing_Parallax" unique_id=702079303]
 position = Vector2(321, 294)
 scale = Vector2(2, 2)
 texture = ExtResource("5_2q53r")
 
-[node name="Ground" type="StaticBody2D" parent="."]
+[node name="Ground" type="StaticBody2D" parent="." unique_id=533514074]
 
-[node name="Ground_Collision" type="CollisionShape2D" parent="Ground"]
+[node name="Ground_Collision" type="CollisionShape2D" parent="Ground" unique_id=1107617059]
 position = Vector2(291.5, 345)
 shape = SubResource("RectangleShape2D_hg60w")
 debug_color = Color(0.9297358, 3.3691525e-05, 0.6615511, 0.41960785)
 
-[node name="Grass" type="Sprite2D" parent="Ground/Ground_Collision"]
+[node name="Grass" type="Sprite2D" parent="Ground/Ground_Collision" unique_id=616090668]
 position = Vector2(739.5, -27.000008)
 scale = Vector2(8.4375, 0.1728396)
 texture = ExtResource("3_rarr0")
 
-[node name="Sqwonce" type="CharacterBody2D" parent="."]
+[node name="Sqwonce" type="CharacterBody2D" parent="." unique_id=132443824]
 position = Vector2(799, 278)
 script = ExtResource("9_npc")
 dialogue_resource = ExtResource("11_sqwonce_dlg")
 
-[node name="Sqwonce_sprite" type="Sprite2D" parent="Sqwonce"]
+[node name="Sqwonce_sprite" type="Sprite2D" parent="Sqwonce" unique_id=1381459252]
 position = Vector2(26, 1)
 scale = Vector2(3, 3)
 texture = SubResource("CompressedTexture2D_6jwpa")
 
-[node name="InteractionArea" type="Area2D" parent="Sqwonce"]
+[node name="InteractionArea" type="Area2D" parent="Sqwonce" unique_id=1222605422]
 position = Vector2(40, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sqwonce/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sqwonce/InteractionArea" unique_id=485844973]
 position = Vector2(-39.25, 0)
 shape = SubResource("RectangleShape2D_sqwonce_area")
 
-[node name="Sqwonce3" type="CharacterBody2D" parent="."]
+[node name="Almo" type="CharacterBody2D" parent="." unique_id=1937743116]
 position = Vector2(860, 278)
 script = ExtResource("9_npc")
 dialogue_resource = ExtResource("11_sqwonce_dlg")
 
-[node name="Sqwonce_sprite" type="Sprite2D" parent="Sqwonce3"]
+[node name="Almo_sprite" type="Sprite2D" parent="Almo" unique_id=824575723]
 position = Vector2(26, 1)
 scale = Vector2(3, 3)
 texture = ExtResource("9_1vhmt")
 
-[node name="InteractionArea" type="Area2D" parent="Sqwonce3"]
+[node name="InteractionArea" type="Area2D" parent="Almo" unique_id=1635296534]
 position = Vector2(40, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sqwonce3/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Almo/InteractionArea" unique_id=1684897036]
 position = Vector2(13, -6)
 shape = SubResource("RectangleShape2D_sqwonce_area")
 
-[node name="Sqwonce2" type="CharacterBody2D" parent="."]
-position = Vector2(2566, 278)
-script = ExtResource("9_npc")
-dialogue_resource = ExtResource("11_sqwonce_dlg")
-dialogue_start = "start2"
+[node name="Car" type="Sprite2D" parent="." unique_id=1918061879]
+position = Vector2(733, 281)
+scale = Vector2(3.5625, 3.3281252)
+texture = ExtResource("10_4fw28")
 
-[node name="Sqwonce_sprite" type="Sprite2D" parent="Sqwonce2"]
-position = Vector2(26, 1)
-scale = Vector2(3, 3)
-texture = SubResource("CompressedTexture2D_6jwpa")
-
-[node name="InteractionArea" type="Area2D" parent="Sqwonce2"]
-position = Vector2(40, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sqwonce2/InteractionArea"]
-position = Vector2(-16, -9)
-shape = SubResource("RectangleShape2D_sqwonce_area")
-
-[node name="Car" type="Sprite2D" parent="."]
-position = Vector2(734, 297)
-texture = ExtResource("6_6u7ri")
-
-[node name="Car2" type="Sprite2D" parent="."]
+[node name="Car2" type="Sprite2D" parent="." unique_id=433964747]
 position = Vector2(1253, 317)
 texture = ExtResource("10_7hqkv")
 
-[node name="Razon" type="CharacterBody2D" parent="."]
+[node name="Razon" type="CharacterBody2D" parent="." unique_id=199456072]
 position = Vector2(581, 266)
 script = ExtResource("9_npc")
 dialogue_resource = ExtResource("10_razon_dlg")
 
-[node name="Razon_Sprite" type="Sprite2D" parent="Razon"]
+[node name="Razon_Sprite" type="Sprite2D" parent="Razon" unique_id=1730565354]
 position = Vector2(69, 12)
 scale = Vector2(3, 3)
 texture = ExtResource("7_6f66h")
 
-[node name="InteractionArea" type="Area2D" parent="Razon"]
+[node name="InteractionArea" type="Area2D" parent="Razon" unique_id=795126665]
 position = Vector2(57, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Razon/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Razon/InteractionArea" unique_id=1632346144]
 position = Vector2(5, 2)
 shape = SubResource("RectangleShape2D_razon_area")
 
-[node name="Violet" type="CharacterBody2D" parent="."]
+[node name="Violet" type="CharacterBody2D" parent="." unique_id=257385088]
 position = Vector2(1152, 267)
 script = ExtResource("9_npc")
 dialogue_resource = ExtResource("12_y561w")
 
-[node name="InteractionArea" type="Area2D" parent="Violet"]
+[node name="InteractionArea" type="Area2D" parent="Violet" unique_id=1112433744]
 position = Vector2(57, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Violet/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Violet/InteractionArea" unique_id=404897592]
 position = Vector2(13, -2)
 shape = SubResource("RectangleShape2D_razon_area")
 
-[node name="Sprite2D" type="Sprite2D" parent="Violet"]
+[node name="Sprite2D" type="Sprite2D" parent="Violet" unique_id=1471500929]
 position = Vector2(70, 11)
 scale = Vector2(3, 3)
 texture = ExtResource("12_ywops")
 
-[node name="Lilac" type="CharacterBody2D" parent="."]
+[node name="Lilac" type="CharacterBody2D" parent="." unique_id=1539108742]
 position = Vector2(1208, 265)
 script = ExtResource("9_npc")
 dialogue_resource = ExtResource("12_y561w")
 
-[node name="Lilac_Sprite" type="Sprite2D" parent="Lilac"]
+[node name="Lilac_Sprite" type="Sprite2D" parent="Lilac" unique_id=1597508851]
 position = Vector2(-47, 10)
 scale = Vector2(3, 3)
 texture = ExtResource("15_bn1ym")
 flip_h = true
 
-[node name="InteractionArea" type="Area2D" parent="Lilac"]
+[node name="InteractionArea" type="Area2D" parent="Lilac" unique_id=1728709378]
 position = Vector2(57, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lilac/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lilac/InteractionArea" unique_id=616231478]
 position = Vector2(-106.5, -6)
 shape = SubResource("RectangleShape2D_razon_area")
 
-[node name="Lilac2" type="CharacterBody2D" parent="."]
-position = Vector2(1386, 263)
+[node name="Anselm" type="CharacterBody2D" parent="." unique_id=253157900]
+position = Vector2(1373, 261)
 script = ExtResource("9_npc")
 dialogue_resource = ExtResource("12_y561w")
 
-[node name="Lilac_Sprite" type="Sprite2D" parent="Lilac2"]
+[node name="Anselm_Sprite" type="Sprite2D" parent="Anselm" unique_id=469670562]
 position = Vector2(-107, 15)
 scale = Vector2(3, 3)
 texture = ExtResource("16_1vhmt")
 
-[node name="InteractionArea" type="Area2D" parent="Lilac2"]
+[node name="InteractionArea" type="Area2D" parent="Anselm" unique_id=932352659]
 position = Vector2(47, 3)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lilac2/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Anselm/InteractionArea" unique_id=811018081]
 position = Vector2(-142, 0)
 shape = SubResource("RectangleShape2D_razon_area")
 
-[node name="Sebby" type="CharacterBody2D" parent="."]
+[node name="Sebby" type="CharacterBody2D" parent="." unique_id=2133298460]
 position = Vector2(240, 276)
 script = ExtResource("7_rarr0")
 
-[node name="Sebby_Sprite" type="Sprite2D" parent="Sebby"]
+[node name="Sebby_Sprite" type="Sprite2D" parent="Sebby" unique_id=1912177302]
 scale = Vector2(3, 3)
 texture = ExtResource("13_2q53r")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sebby"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sebby" unique_id=761247760]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_yngf6")
 
-[node name="Camera2D" type="Camera2D" parent="Sebby"]
+[node name="Camera2D" type="Camera2D" parent="Sebby" unique_id=251207423]
 position = Vector2(2, -114)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(961, 291)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("20_b10l3")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=360472273]
+position = Vector2(951.99994, 277)
+scale = Vector2(3.2093725, 3.2093725)
+texture = ExtResource("20_ud1vh")
 
-[node name="Shinomy" type="CharacterBody2D" parent="."]
+[node name="Shinomy" type="CharacterBody2D" parent="." unique_id=1806669693]
 position = Vector2(1669, 306)
 script = ExtResource("9_npc")
 dialogue_resource = ExtResource("21_4fw28")
 
-[node name="Sprite2D" type="Sprite2D" parent="Shinomy"]
+[node name="Sprite2D" type="Sprite2D" parent="Shinomy" unique_id=1884707043]
 position = Vector2(2, -29)
 scale = Vector2(3, 3)
 texture = ExtResource("22_ud1vh")
 
-[node name="InteractionArea" type="Area2D" parent="Shinomy"]
+[node name="InteractionArea" type="Area2D" parent="Shinomy" unique_id=2082658608]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Shinomy/InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Shinomy/InteractionArea" unique_id=705023837]
 position = Vector2(1, -28.25)
+shape = SubResource("RectangleShape2D_6flcb")
+
+[node name="Lux" type="CharacterBody2D" parent="." unique_id=834302002]
+position = Vector2(1428, 302)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("21_4fw28")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lux" unique_id=17241634]
+position = Vector2(161, -25)
+scale = Vector2(3, 3)
+texture = ExtResource("23_6flcb")
+flip_h = true
+
+[node name="InteractionArea" type="Area2D" parent="Lux" unique_id=1761548519]
+position = Vector2(132, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lux/InteractionArea" unique_id=2120405171]
+position = Vector2(26, -30)
+shape = SubResource("RectangleShape2D_6flcb")
+
+[node name="Lux2" type="CharacterBody2D" parent="." unique_id=1654858670]
+position = Vector2(1369, 300)
+script = ExtResource("9_npc")
+dialogue_resource = ExtResource("21_4fw28")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lux2" unique_id=289415116]
+position = Vector2(161, -25)
+scale = Vector2(3, 3)
+texture = ExtResource("24_7rgp3")
+flip_h = true
+
+[node name="InteractionArea" type="Area2D" parent="Lux2" unique_id=1945146520]
+position = Vector2(132, 7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lux2/InteractionArea" unique_id=488561852]
+position = Vector2(31, -31)
 shape = SubResource("RectangleShape2D_6flcb")
 
 [connection signal="body_entered" from="Sqwonce/InteractionArea" to="Sqwonce" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Sqwonce/InteractionArea" to="Sqwonce" method="_on_interaction_area_body_exited"]
-[connection signal="body_entered" from="Sqwonce3/InteractionArea" to="Sqwonce3" method="_on_interaction_area_body_entered"]
-[connection signal="body_exited" from="Sqwonce3/InteractionArea" to="Sqwonce3" method="_on_interaction_area_body_exited"]
-[connection signal="body_entered" from="Sqwonce2/InteractionArea" to="Sqwonce2" method="_on_interaction_area_body_entered"]
-[connection signal="body_exited" from="Sqwonce2/InteractionArea" to="Sqwonce2" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Almo/InteractionArea" to="Almo" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Almo/InteractionArea" to="Almo" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Razon/InteractionArea" to="Razon" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Razon/InteractionArea" to="Razon" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Violet/InteractionArea" to="Violet" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Violet/InteractionArea" to="Violet" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="Lilac/InteractionArea" to="Lilac" method="_on_interaction_area_body_entered"]
 [connection signal="body_exited" from="Lilac/InteractionArea" to="Lilac" method="_on_interaction_area_body_exited"]
-[connection signal="body_entered" from="Lilac2/InteractionArea" to="Lilac2" method="_on_interaction_area_body_entered"]
-[connection signal="body_exited" from="Lilac2/InteractionArea" to="Lilac2" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="Anselm/InteractionArea" to="Anselm" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="Anselm/InteractionArea" to="Anselm" method="_on_interaction_area_body_exited"]
